@@ -1,7 +1,7 @@
 # InfiniteMonkeyTheorem
 Evolutionary Algorithm (GA) to "solve" Infinite monkey theorem
 
-//============================================================================
+\n//============================================================================
 // Name        : InfiniteMonkeyTheorem.cpp
 // Author      : Willtl
 // Version     : v01
