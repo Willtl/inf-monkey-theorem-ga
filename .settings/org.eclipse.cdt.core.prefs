@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/MINGW_HOME/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/MINGW_HOME/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/MINGW_HOME/value=C\:\\MinGW64
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/MSYS_HOME/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/MSYS_HOME/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/MSYS_HOME/value=
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.986914736/appendContributed=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/MINGW_HOME/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/MINGW_HOME/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/MINGW_HOME/value=
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/MSYS_HOME/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/MSYS_HOME/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/MSYS_HOME/value=C\:\\MinGW64
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.release.1756225457/appendContributed=true
