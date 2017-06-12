@@ -14,7 +14,6 @@
 #include <math.h>
 #include "GeneticAlgorithm/GeneticAlgorithm.h"
 
-
 using namespace std;
 
 // GA configuration
