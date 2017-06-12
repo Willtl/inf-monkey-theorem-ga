@@ -34,10 +34,8 @@ GeneticAlgorithm::GeneticAlgorithm(bool elitism, int populationSize,
 		while (newPop->individuals.size() < (unsigned) populationSize) {
 			Individual parent1 = tournamentSelection(2, pop);
 			Individual parent2 = tournamentSelection(2, pop);
-
 			float r = static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
 			float m = static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
-
 			if (r < 0.9) {
 				vector<Individual> offspring = crossover(parent1, parent2,
 						vectorPhrase);
@@ -45,10 +43,8 @@ GeneticAlgorithm::GeneticAlgorithm(bool elitism, int populationSize,
 					mutate(offspring[0]);
 					mutate(offspring[1]);
 				}
-
 				offspring[0].calculateFitness(vectorPhrase);
 				offspring[1].calculateFitness(vectorPhrase);
-
 				newPop->individuals.push_back(offspring[0]);
 				newPop->individuals.push_back(offspring[1]);
 			} else {
@@ -61,7 +57,6 @@ GeneticAlgorithm::GeneticAlgorithm(bool elitism, int populationSize,
 				newPop->individuals.push_back(parent1);
 				newPop->individuals.push_back(parent2);
 			}
-
 			pop = newPop;
 		}
 	}
