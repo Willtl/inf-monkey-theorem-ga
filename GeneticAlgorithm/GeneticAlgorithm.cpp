@@ -39,7 +39,7 @@ GeneticAlgorithm::GeneticAlgorithm(bool elitism, int populationSize,
 			if (r < 0.9) {
 				vector<Individual> offspring = crossover(parent1, parent2,
 						vectorPhrase);
-				if (m < 0.1) {
+				if (m < 0.01) {
 					mutate(offspring[0]);
 					mutate(offspring[1]);
 				}
@@ -48,7 +48,7 @@ GeneticAlgorithm::GeneticAlgorithm(bool elitism, int populationSize,
 				newPop->individuals.push_back(offspring[0]);
 				newPop->individuals.push_back(offspring[1]);
 			} else {
-				if (m < 0.1) {
+				if (m < 0.01) {
 					mutate(parent1);
 					mutate(parent2);
 					parent1.calculateFitness(vectorPhrase);
