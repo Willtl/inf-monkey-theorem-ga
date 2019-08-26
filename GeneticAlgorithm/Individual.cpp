@@ -20,14 +20,14 @@ Individual::~Individual() {
 }
 
 void Individual::generateRandomChromosome(vector<char> chromosomePlate) {
-	this->chromosome = chromosomePlate;
+	this->chromosome = chromosomePlate; 
 	for (int i = 0; i < chromosome.size(); i++) {
 		char gene = chromosome[i];
 		if ((int) gene >= 97 && (int) gene <= 122) {
 			char random = generateRandomCharacter(97, 122);
-			chromosome[i] = random;
+			chromosome[i] = random; 
 		}
-	}
+	} 
 }
 
 char Individual::generateRandomCharacter(int min, int max) {

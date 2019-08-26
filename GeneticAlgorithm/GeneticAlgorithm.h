@@ -22,7 +22,9 @@ public:
 	Individual tournamentSelection(int, Population*);
 	vector<Individual> crossover(Individual, Individual, vector<char>);
 	void mutate(Individual&);
-	void printBestMonkey(int, Individual&);
+	void printBestMonkey(int, Individual&, vector<char>);
+
+	int optimal = 0;
 };
 
 #endif /* GENETICALGORITHM_GENETICALGORITHM_H_ */

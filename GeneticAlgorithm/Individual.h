@@ -24,7 +24,7 @@ public:
 	void calculateFitness(vector<char>);
 
 	vector<char> chromosome;
-	int fitness;
+	int fitness; 
 };
 
 #endif /* GENETICALGORITHM_INDIVIDUAL_H_ */

@@ -19,7 +19,7 @@ using namespace std;
 
 // GA configuration
 static int populationSize = 250;
-static int numberOfGenerations = 1000; //0 to evolve until final solution
+static int numberOfGenerations = 100000; //0 to evolve until final solution
 static bool elitism = true;
 
 vector<char> parseStringToCharArray(string str);
@@ -45,7 +45,8 @@ vector<char> parseStringToCharArray(string str) {
 
 string readPhrase(bool showPhrase) {
 	string phrase;
-	cout << "Enter a Shakespeare Poem or phrase:";
+	cout << "Genetic Algorithm parameters \n     population size = " << populationSize << ", number of iterations: " << numberOfGenerations << endl;
+	cout << "Enter a Shakespeare Poem or phrase: \n\n";
 	getline(cin, phrase);
 	if (showPhrase)
 		cout << phrase << endl;

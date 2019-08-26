@@ -14,7 +14,21 @@ GeneticAlgorithm::GeneticAlgorithm(bool elitism, int populationSize,
 		int numbGenerations, vector<char> vectorPhrase) {
 	cout << "Generating " << populationSize << " monkeys!" << endl;
 	Population *pop = new Population(true, populationSize, vectorPhrase);
+	
+	// Check optimal fitness 
+ 
+
+	for (int i = 0; i < vectorPhrase.size(); i++) {
+		int gene = (int) vectorPhrase[i];
+		int genePlate = (int) vectorPhrase[i];
+		if (gene == genePlate && gene != 32) {
+			optimal++;
+		}
+	}
+
+
 	cout << "Starting evolutionary proceedure..." << endl << endl;
+	
 	for (int i = 0; i < numbGenerations; i++) {
 		pop->sortIndividuals();
 
@@ -24,11 +38,11 @@ GeneticAlgorithm::GeneticAlgorithm(bool elitism, int populationSize,
 		if (elitism)
 			newPop->individuals.push_back(pop->individuals[0]);
 
-		printBestMonkey(i, pop->individuals[0]);
+		printBestMonkey(i, pop->individuals[0], vectorPhrase);
 
 		if (pop->individuals[0].chromosome == vectorPhrase){
 			cout << "" << endl;
-			break;
+			exit(0);
 		}
 
 		while (newPop->individuals.size() < (unsigned) populationSize) {
@@ -124,10 +138,14 @@ void GeneticAlgorithm::mutate(Individual& ind) {
 	ind.chromosome[placeToMutate] = mutatedCharacter;
 }
 
-void GeneticAlgorithm::printBestMonkey(int generation, Individual& monkey) {
-	cout << "Best \"monkey\" of generation " << (generation + 1) << ": "
-			<< monkey.fitness << endl;
-	for (auto i : monkey.chromosome)
-		cout << i;
-	cout << endl;
+void GeneticAlgorithm::printBestMonkey(int generation, Individual& monkey, vector<char> vectorPhrase) {
+	// cout << "Best \"monkey\" of generation " << (generation + 1) << ": " << monkey.fitness << " (optimal = " << optimal << ")" << endl;
+	
+	for(size_t i = 0; i < monkey.chromosome.size(); i++){
+		if(monkey.chromosome[i] != vectorPhrase[i])
+			cout << "\033[1;31m" << monkey.chromosome[i] << "\033[0m";
+		else
+			cout << "\033[1;32m" << monkey.chromosome[i] << "\033[0m";
+	}
+	cout << endl; 
 }
